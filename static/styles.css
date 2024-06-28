@@ -1,0 +1,105 @@
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.content {
+    padding: 20px;
+    margin-bottom: 200px; /* Add margin to the bottom to make space for the form container */
+    box-sizing: border-box;
+}
+
+h1, h2, h3 {
+    margin: 10px 0;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1.5em;
+    color: #ccc; /* Slightly different color for subtitle */
+}
+
+p, ul {
+    margin: 20px 0;
+    text-align: justify;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.form-container {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #333; /* Grey background for form */
+    color: #fff; /* White text for form */
+    padding: 20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    z-index: 10;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    width: 80%;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #fff; /* White background for input fields */
+    color: #000; /* Black text for input fields */
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    background-color: #4CAF50; /* Green button */
+    color: #fff; /* White text */
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.typing-animation {
+    display: inline;
+    border-right: 2px solid #fff;
+    white-space: nowrap;
+    overflow: hidden;
+}

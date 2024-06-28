@@ -1,0 +1,8 @@
+Flask==2.0.3
+Werkzeug==2.0.2 
+requests==2.26.0
+google-generativeai
+python-dotenv==0.19.1
+markdown2
+Pillow
+googletrans==4.0.0-rc1

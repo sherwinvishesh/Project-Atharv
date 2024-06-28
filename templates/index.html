@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Atharv: The AI Assistant for Farming</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="content">
+        <h1 class="typing-animation" id="hello-there">Hello There,</h1>
+        <h2>Welcome to Atharv</h2>
+        <h3>Your farming assistant</h3>
+        <p>Atharv is a cutting-edge AI assistant designed to revolutionize the farming industry. By leveraging advanced machine learning algorithms and real-time data analysis, Atharv provides farmers with critical insights and recommendations tailored to their unique needs. Whether it's predicting the optimal time for planting, providing weather forecasts, or offering pest control advice, Atharv is here to help farmers maximize their yield and efficiency.</p>
+        
+        <p>Features of Atharv include:</p>
+        <ul>
+            <li>Real-time weather updates and forecasts</li>
+            <li>Crop health monitoring and diagnostics</li>
+            <li>Soil quality assessment and recommendations</li>
+            <li>Automated pest and disease detection</li>
+            <li>Personalized farming tips and best practices</li>
+            <li>Data-driven irrigation and fertilization schedules</li>
+        </ul>
+
+        <p>With Atharv, farmers can make informed decisions that enhance productivity while promoting sustainable farming practices. Our goal is to empower farmers with the tools and knowledge they need to thrive in an ever-changing agricultural landscape.</p>
+        
+        <p>Getting started with Atharv is easy. Simply select your preferred language, enter your location's pin code, and click 'Start'. Atharv will then tailor its recommendations to your specific conditions, ensuring you get the most relevant and accurate advice possible.</p>
+
+        
+        <p>Join the growing community of farmers who trust Atharv to help them succeed. Together, we can create a more productive, sustainable, and prosperous future for agriculture.</p>
+        <p>.</p>
+        <p>.</p>
+        <p>.</p>
+
+    </div>
+    <div class="form-container">
+        <form method="post">
+            <div class="form-group">
+                <label class="typing-animation" id="select-language">Select Language:</label>
+                <select id="language" name="language" required>
+                    {% for code, name in languages.items() %}
+                    <option value="{{ code }}">{{ name }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="typing-animation" id="enter-pin-code">Enter Pin Code:</label>
+                <input type="text" id="location" name="location" required>
+            </div>
+            <button type="submit">Start</button>
+        </form>
+    </div>
+
+    <script>
+        const texts = {
+            "hello-there": {
+                "en": "Hello There,",
+                "hi": "नमस्ते,",
+                "bn": "নমস্কার,",
+                "te": "హలో,",
+                "mr": "नमस्कार,",
+                "ta": "வணக்கம்,",
+                "gu": "નમસ્તે,",
+                "kn": "ಹಲೋ,",
+                "ml": "ഹലോ,",
+                "pa": "ਸਤ ਸ੍ਰੀ ਅਕਾਲ,",
+                "or": "ନମସ୍କାର,"
+            },
+            "select-language": {
+                "en": "Select Language:",
+                "hi": "भाषा का चयन करें:",
+                "bn": "ভাষা নির্বাচন করুন:",
+                "te": "భాషను ఎంచుకోండి:",
+                "mr": "भाषा निवडा:",
+                "ta": "மொழியைத் தேர்ந்தெடுக்கவும்:",
+                "gu": "ભાષા પસંદ કરો:",
+                "kn": "ಭಾಷೆಯನ್ನು ಆಯ್ಕೆಮಾಡಿ:",
+                "ml": "ഭാഷ തിരഞ്ഞെടുക്കുക:",
+                "pa": "ਭਾਸ਼ਾ ਚੁਣੋ:",
+                "or": "ଭାଷା ଚୟନ କରନ୍ତୁ:"
+            },
+            "enter-pin-code": {
+                "en": "Enter Pin Code:",
+                "hi": "पिन कोड दर्ज करें:",
+                "bn": "পিন কোড লিখুন:",
+                "te": "పిన్ కోడ్ నమోదు చేయండి:",
+                "mr": "पिन कोड प्रविष्ट करा:",
+                "ta": "பின் குறியீட்டை உள்ளிடவும்:",
+                "gu": "પિન કોડ દાખલ કરો:",
+                "kn": "ಪಿನ್ ಕೋಡ್ ನಮೂದಿಸಿ:",
+                "ml": "പിൻ കോഡ് നൽകുക:",
+                "pa": "ਪਿਨ ਕੋਡ ਦਾਖਲ ਕਰੋ:",
+                "or": "ପିନ୍ କୋଡ୍ ପ୍ରବେଶ କରାନ୍ତୁ:"
+            }
+        };
+
+        function typeWriter(elementId, texts, speed = 100, pause = 2000) {
+            let element = document.getElementById(elementId);
+            let textKeys = Object.keys(texts);
+            let textIndex = 0;
+            let charIndex = 0;
+
+            function type() {
+                if (charIndex < texts[textKeys[textIndex]].length) {
+                    element.textContent += texts[textKeys[textIndex]].charAt(charIndex);
+                    charIndex++;
+                    setTimeout(type, speed);
+                } else {
+                    setTimeout(() => {
+                        element.textContent = "";
+                        charIndex = 0;
+                        textIndex = (textIndex + 1) % textKeys.length;
+                        type();
+                    }, pause);
+                }
+            }
+
+            type();
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            typeWriter("hello-there", texts["hello-there"]);
+            typeWriter("select-language", texts["select-language"]);
+            typeWriter("enter-pin-code", texts["enter-pin-code"]);
+        });
+    </script>
+</body>
+</html>
