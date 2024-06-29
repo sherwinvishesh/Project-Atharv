@@ -103,3 +103,28 @@ button:hover {
     white-space: nowrap;
     overflow: hidden;
 }
+
+.image-scroll-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.image-scroll {
+    display: flex;
+    white-space: nowrap;
+    animation: scroll linear infinite;
+    animation-duration: calc(10s * 6); /* Adjust time based on number of images and desired speed */
+}
+
+.image-scroll img {
+    min-width: 200px;
+    max-width: 300px; /* Adjust based on your design */
+    height: auto;
+    margin-right: 20px;
+}
+
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); /* Move by 50% of the total width (because of duplication) */
+    }
+}
