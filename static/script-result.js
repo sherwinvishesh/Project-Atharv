@@ -3,7 +3,7 @@ $(document).ready(function() {
         event.preventDefault();
         var userInput = $('input[name="text_query"]').val();
         appendUserMessage(userInput);
-        $('#text-form button').prop('disabled', true); // Disable the button
+        $('#text-form button').hide(); // Hide the button
         $('#loading-spinner-text').show(); // Show the loading spinner
 
         $.ajax({
@@ -17,8 +17,8 @@ $(document).ready(function() {
                 appendBotMessage("Failed to retrieve the response: " + xhr.responseText);
             },
             complete: function() {
-                $('#text-form button').prop('disabled', false); // Enable the button
                 $('#loading-spinner-text').hide(); // Hide the loading spinner
+                $('#text-form button').show(); // Show the button again
             }
         });
         $('input[name="text_query"]').val(''); // Clear the input field
@@ -27,7 +27,7 @@ $(document).ready(function() {
     $('#image-form').submit(function(event) {
         event.preventDefault();
         var formData = new FormData(this);
-        $('#image-form button').prop('disabled', true); // Disable the button
+        $('#image-form button').hide(); // Hide the button
         $('#loading-spinner-image').show(); // Show the loading spinner
 
         $.ajax({
@@ -43,8 +43,8 @@ $(document).ready(function() {
                 $('#image-response').html('<div class="response-box">Failed to retrieve the response: ' + xhr.responseText + '</div>');
             },
             complete: function() {
-                $('#image-form button').prop('disabled', false); // Enable the button
                 $('#loading-spinner-image').hide(); // Hide the loading spinner
+                $('#image-form button').show(); // Show the button again
             }
         });
     });
