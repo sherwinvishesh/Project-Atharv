@@ -156,10 +156,14 @@ button:hover {
     margin-bottom: 5px;
 }
 
-#loading-spinner-text,
-#loading-spinner-image {
-    width: 20px; /* Adjust the size as needed */
-    height: 20px;
-    margin-left: 10px;
+
+
+button, #loading-spinner-text, #loading-spinner-image {
+    height: 40px;  /* Adjust this value to match your button's height */
     vertical-align: middle;
+}
+
+#loading-spinner-text, #loading-spinner-image {
+    width: auto; /* This will maintain the aspect ratio of the GIF */
+    display: none; /* Start with the spinner hidden */
 }
