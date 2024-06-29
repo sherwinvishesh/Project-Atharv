@@ -1,3 +1,4 @@
+# Praise the Lord 
 from flask import Flask, request, render_template, jsonify, redirect, url_for, session
 import requests
 import pathlib
@@ -11,7 +12,8 @@ from markdown2 import markdown
 
 load_dotenv()  # Load environment variables
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='static')
+
 api_key = os.getenv("GEMINI_API_KEY")
 genai.configure(api_key=api_key)
 uploads_dir = os.path.join(app.root_path, 'uploads')
@@ -20,12 +22,12 @@ os.makedirs(uploads_dir, exist_ok=True)
 LANGUAGES = {
     'en': 'English',
     'hi': 'Hindi',
+    'kn': 'Kannada',
     'bn': 'Bengali',
     'te': 'Telugu',
     'mr': 'Marathi',
     'ta': 'Tamil',
     'gu': 'Gujarati',
-    'kn': 'Kannada',
     'ml': 'Malayalam',
     'pa': 'Punjabi',
     'or': 'Odia'
