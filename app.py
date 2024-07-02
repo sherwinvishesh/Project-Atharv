@@ -60,12 +60,7 @@ def home():
         location = request.form['location']
         language = request.form['language']
         return redirect(url_for('weather', location=location, language=language))
-    if request.method == 'POST':
-        language = request.form['language']
-        return redirect(url_for('analyze_text', language=language))
-    if request.method == 'POST':
-        language = request.form['language']
-        return redirect(url_for('analyze_image', language=language))
+    #redirect(url_for('analyze_text', language=language)),redirect(url_for('analyze_image', language=language))
     return render_template('index.html', languages=LANGUAGES)
 
 @app.route('/weather')
@@ -101,13 +96,21 @@ def weather():
 
 @app.route('/analyze_text', methods=['POST'])
 def analyze_text():
-    user_input = request.form.get('text_query', 'No input provided')  # Default message if nothing is provided
+    user_input = request.form.get('text_query', 'No input provided')
+    language = request.form.get('language', 'en')
     try:
         response = chat_session.send_message(user_input)
-        html_response = markdown(response.text)  # Convert markdown to HTML
-        return html_response  # Send HTML response directly
+        html_response = markdown(response.text)
+        
+        # Translate the response if the language is not English
+        if language != 'en':
+            translator = Translator()
+            translated_response = translator.translate(html_response, dest=language).text
+            html_response = markdown(translated_response)
+        
+        return html_response
     except Exception as e:
-        print(e)  # Log the error for debugging
+        print(e)
         return "Error processing your request: " + str(e), 500
 
 @app.route('/analyze_image', methods=['POST'])
@@ -115,19 +118,27 @@ def analyze_image():
     if 'image_file' not in request.files:
         return jsonify("No file part"), 400
     image_file = request.files['image_file']
+    language = request.form.get('language', 'en')
     if image_file.filename == '':
         return jsonify("No selected file"), 400
     if image_file and allowed_file(image_file.filename):
         filename = secure_filename(image_file.filename)
-        image_path = os.path.join(uploads_dir, filename)  # Use the uploads directory path
+        image_path = os.path.join(uploads_dir, filename)
         try:
             image_file.save(image_path)
             with Image.open(image_path) as img:
                 response = genai.GenerativeModel('gemini-pro-vision').generate_content(
                     ["Describe this agricultural issue in detail and provide solutions.", img],
                     safety_settings={})
-                html_response = markdown(response.text)  # Convert markdown to HTML
-                return html_response  # Send HTML response directly
+                html_response = markdown(response.text)
+                
+                # Translate the response if the language is not English
+                if language != 'en':
+                    translator = Translator()
+                    translated_response = translator.translate(html_response, dest=language).text
+                    html_response = markdown(translated_response)
+                
+                return html_response
         except Exception as e:
             print(f"Failed to save or analyze the image: {e}")
             return jsonify(f"Error processing the image: {e}"), 500
