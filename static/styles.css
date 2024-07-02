@@ -128,3 +128,22 @@ button:hover {
     100% { transform: translateX(-50%); /* Move by 50% of the total width (because of duplication) */
     }
 }
+
+.button-container {
+    position: relative;
+    display: inline-block;
+}
+
+#start-button,
+#loading-spinner-start {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#loading-spinner-start {
+    display: none;
+    height: 40px; /* Adjust this to match your button height */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
