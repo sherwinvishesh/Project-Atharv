@@ -98,15 +98,25 @@ def weather():
 def analyze_text():
     user_input = request.form.get('text_query', 'No input provided')
     language = request.form.get('language', 'en')
+    translator = Translator()
+    
     try:
-        response = chat_session.send_message(user_input)
-        html_response = markdown(response.text)
-        
-        # Translate the response if the language is not English
+        # Translate user input to English if it's not already in English
         if language != 'en':
-            translator = Translator()
-            translated_response = translator.translate(html_response, dest=language).text
+            translated_input = translator.translate(user_input, src=language, dest='en').text
+        else:
+            translated_input = user_input
+
+        # Send translated input to generative AI
+        response = chat_session.send_message(translated_input)
+        english_response = response.text
+        
+        # Translate the response back to the original language if it's not English
+        if language != 'en':
+            translated_response = translator.translate(english_response, src='en', dest=language).text
             html_response = markdown(translated_response)
+        else:
+            html_response = markdown(english_response)
         
         return html_response
     except Exception as e:
