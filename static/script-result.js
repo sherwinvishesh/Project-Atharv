@@ -70,6 +70,28 @@ $(document).ready(function() {
         $('#text-tab').hide();
     });
 
+    $('.menu-item').click(function() {
+        $('.menu-item').removeClass('active'); // Remove active class from all menu items
+        $(this).addClass('active'); // Add active class to the clicked menu item
+        // Existing functionality to show/hide tabs
+        if ($(this).is('#weather-menu')) {
+            $('.tab').removeClass('active');
+            $('.weather-section').show();
+            $('#text-tab').hide();
+            $('#image-tab').hide();
+        } else if ($(this).is('#text-menu')) {
+            $('.tab').removeClass('active');
+            $('#text-tab').addClass('active').show();
+            $('.weather-section').hide();
+            $('#image-tab').hide();
+        } else if ($(this).is('#image-menu')) {
+            $('.tab').removeClass('active');
+            $('#image-tab').addClass('active').show();
+            $('.weather-section').hide();
+            $('#text-tab').hide();
+        }
+    });
+
     // Initialize with the weather tab visible
     $('#weather-menu').click();
 });
@@ -90,3 +112,6 @@ function scrollChatToBottom() {
     var chatBox = $('#chat-box');
     chatBox.scrollTop(chatBox[0].scrollHeight);
 }
+
+
+
