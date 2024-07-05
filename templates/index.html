@@ -5,16 +5,18 @@
     <title>Atharv: The AI Assistant for Farming</title>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-	 <link rel="icon" type="image/png" href="{{ url_for('static', filename='public/logo.png') }}">
+	<link rel="icon" type="image/png" href="{{ url_for('static', filename='public/logo.png') }}">
+    <meta name="description" content="Atharv: AI-powered farming assistant providing weather insights, crop disease detection, and agricultural advice.">
+    <meta name="keywords" content="farming, agriculture, AI, weather, crop disease, farming assistant">
 
 </head>
 <body>
     <div class="content">
         <h1>Hello there <span class="typing-animation" id="hello-there"></span>,</h1>
-        <h2>Welcome to Atharv</h2>
-        <h3>Your farming assistant</h3>
+        <h2>Welcome to Atharv, Your farming assistant</h2>
+
         <p>Atharv is a sophisticated AI chatbot designed to empower farmers with actionable insights and comprehensive agricultural support. Utilizing advanced machine learning algorithms, Atharv delivers real-time weather updates, disease prediction, and personalized farming recommendations. This smart assistant analyzes vast amounts of data to provide farmers with forecasts, detect potential crop diseases early, and offer tailored solutions to enhance crop yield and farm efficiency. Atharv is more than just a tool; it's a farming partner that helps in making informed decisions, ensuring sustainability and maximizing productivity. Join the revolution in agriculture with Atharv, where technology meets tradition to foster a prosperous future for farming.</p>
-        
+
         <h2>Features of Atharv</h2>
 <ul>
     <li><strong>Weather Insights:</strong> Atharv's weather insights provide comprehensive and real-time weather information, helping farmers plan their agricultural activities with precision. By analyzing weather patterns and forecasts, Atharv enables farmers to make informed decisions about planting, irrigation, and harvesting times, minimizing risks and improving crop yield. This feature ensures that farmers are always one step ahead of the weather, safeguarding their crops and enhancing farm productivity.</li>
@@ -27,13 +29,13 @@
 <h2>How to Use Atharv</h2>
 <ol>
     <li><strong>Enter Your Pin Code and Language:</strong> Start by entering your local pin code and selecting your preferred language. This information helps Atharv to provide localized data and content in your language, enhancing the user experience and accuracy of the information provided.</li>
-    
+
     <li><strong>Click "Start":</strong> Once your details are entered, click the "Start" button. You'll be directed to the results page where Atharv begins to assist you with its features.</li>
-    
+
     <li><strong>Weather Page:</strong> The first page you encounter is the Weather Page. Here, you receive live weather updates and forecasts, crucial for planning your farming activities. This real-time information helps in making timely decisions to protect and optimize your crop production.</li>
-    
+
     <li><strong>Access Text-Based Chatbot:</strong> Click the chat button to activate the text-based chatbot. In this section, you can type any agriculture-related query into the textbox and click 'Analyze Text'. Within seconds, the chatbot will respond with detailed answers, helping you solve specific farming issues.</li>
-    
+
     <li><strong>Use Image-Based Chatbot:</strong> By selecting the camera icon, you enter the image-based chatbot interface. Here, attach an image of your crop that shows any signs of disease or distress, then click 'Analyze Image'. The chatbot quickly analyzes the image and provides detailed insights about the disease, along with recommendations for treatment and soil health improvement.</li>
 </ol>
 
@@ -41,15 +43,15 @@
 <p>Atharv incorporates a variety of cutting-edge technologies to provide accurate, timely, and actionable agricultural insights:</p>
 <ul>
     <li><strong>Google Generative AI:</strong> At the core of Atharv's capabilities is Google's Generative AI technology, which powers both the text and image-based chatbots. This technology utilizes advanced machine learning models to generate responsive, context-aware interactions, enabling detailed agricultural advice and analysis.</li>
-    
+
     <li><strong>Weather API Integration:</strong> Atharv uses real-time weather APIs to fetch and deliver current and forecasted weather conditions. This allows the system to provide farmers with timely updates that are critical for making informed decisions regarding crop management and farming practices.</li>
-    
+
     <li><strong>Google Translate:</strong> To ensure accessibility across diverse linguistic backgrounds, Atharv integrates Google Translate. This service provides instant translation of the chatbot’s responses into several regional languages, making the tool useful for farmers across different regions.</li>
-    
+
     <li><strong>Flask:</strong> Flask, a lightweight WSGI web application framework, is used to create and run the web interface of Atharv. It supports the setup of a user-friendly, scalable, and secure platform, facilitating seamless interactions between the users and the AI system.</li>
-    
+
     <li><strong>Pillow (PIL):</strong> For handling image data within the image-based chatbot feature, Atharv utilizes Pillow, a powerful Python Imaging Library that supports opening, manipulating, and saving many different image file formats.</li>
-    
+
     <li><strong>Environment Variables and Security:</strong> Atharv uses environment variables to manage API keys and other sensitive information securely, ensuring that user data and access credentials are protected.</li>
 </ul>
 <h2>User Interface</h2>
@@ -78,7 +80,7 @@
 		<img src="{{ url_for('static', filename='public/image3_display.jpeg') }}" alt="Image description 3">
 		<img src="{{ url_for('static', filename='public/image4_display.jpeg') }}" alt="Image description 4">
 		<img src="{{ url_for('static', filename='public/image5_display.jpeg') }}" alt="Image description 5">
-        
+
     </div>
 </div>
 <p>Hi, I'm Sherwin Vishesh Jathanna, a computer science undergraduate at Arizona State University, and I've been passionate about programming since the second grade. My journey with coding began early, and it has always been driven by a desire to apply technology to solve real-world problems. My latest initiative, the Atharv project, reflects my commitment to using innovative solutions to support the agricultural sector in India.</p>
@@ -105,20 +107,22 @@
 
 <h2>Conclusion</h2>
         <p>With Atharv, farmers can make informed decisions that enhance productivity while promoting sustainable farming practices. Our goal is to empower farmers with the tools and knowledge they need to thrive in an ever-changing agricultural landscape.</p>
-        
 
-        
-        
+
+
+
         <p>.</p>
         <p>.</p>
         <p>.</p>
+        <p>.</p>
+
 
     </div>
     <!-- In the form section of index.html -->
 <div class="form-container">
     <form method="post" id="start-form">
         <div class="form-group">
-            <h3>Select Language <span class="typing-animation" id="select-language"></span>:</h3>
+            <h3 class="form-text">Select Language <span class="typing-animation" id="select-language"></span>:</h3>
             <select id="language" name="language" required>
                 {% for code, name in languages.items() %}
                 <option value="{{ code }}">{{ name }}</option>
@@ -126,7 +130,7 @@
             </select>
         </div>
         <div class="form-group">
-            <h3>Enter Pin Code <span class="typing-animation" id="enter-pin-code"></span>:</h3>
+            <h3 class="form-text">Enter Pin Code <span class="typing-animation" id="enter-pin-code"></span>:</h3>
             <input type="text" id="location" name="location" required>
         </div>
         <div class="button-container">
@@ -136,7 +140,7 @@
     </form>
 </div>
 
-    
+
         <script src="{{ url_for('static', filename='script.js') }}"></script>
 
 </body>
