@@ -14,14 +14,16 @@ body {
 .weather-section {
     text-align: center;
     margin-bottom: 30px;
+    font-size: 2em;
 }
 
 .analysis-section {
     text-align: center;
+
 }
 
 h2 {
-    font-size: 2em;
+    font-size: 2.4em;
     margin-bottom: 10px;
 }
 
@@ -72,6 +74,7 @@ button:hover {
     display: flex;
     justify-content: space-around;
     padding: 10px 0;
+    font-size: 3em;
 }
 
 .menu-item {
@@ -93,7 +96,7 @@ button:hover {
 }
 
 .chat-box {
-    max-height: 500px;
+    max-height: 60vh;
     overflow-y: auto;
     background-color: #000;
     padding: 10px;
@@ -166,4 +169,19 @@ button, #loading-spinner-text, #loading-spinner-image {
 #loading-spinner-text, #loading-spinner-image {
     width: auto; /* This will maintain the aspect ratio of the GIF */
     display: none; /* Start with the spinner hidden */
+}
+
+.menu-item.active i {
+    color: #38c238; /* Light green color for the active icon */
+}
+
+
+@media (max-width: 768px) {
+    .chat-box {
+        max-height: 80vh;
+    }
+    .analysis-section {
+
+        font-size: 1.5em;
+    }
 }
