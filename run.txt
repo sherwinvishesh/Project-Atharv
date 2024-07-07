@@ -1,0 +1,4 @@
+
+pip3 install -r requirements.txt && \
+mv templates/index.jsx templates/index.html && \
+mv templates/result.jsx templates/result.html
