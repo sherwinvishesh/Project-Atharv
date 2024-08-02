@@ -29,7 +29,7 @@ Atharv is a AI chatbot designed to empower farmers with actionable insights and 
 
 1. Clone the repository:
    ```
-   git clone https://github.com/yourusername/atharv.git
+   git clone https://github.com/sherwinvishesh/Project-Atharv-Lite
    ```
 2. Install the required packages:
    ```
@@ -49,7 +49,11 @@ Atharv is a AI chatbot designed to empower farmers with actionable insights and 
 
 ## Demo
 
-[Watch the demo video](https://www.youtube.com/embed/jJL5GvtCNUQ)
+
+
+https://github.com/user-attachments/assets/81d86b2e-13ef-4114-a715-c8cfbf257125
+
+
 
 ## Future Updates
 
