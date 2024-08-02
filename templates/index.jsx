@@ -1,4 +1,4 @@
-<!--- Praise the Lord --->
+
 <!DOCTYPE html>
 <html>
   
