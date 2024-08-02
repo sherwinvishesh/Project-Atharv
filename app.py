@@ -137,7 +137,7 @@ def analyze_image():
         try:
             image_file.save(image_path)
             with Image.open(image_path) as img:
-                response = genai.GenerativeModel('gemini-pro-vision').generate_content(
+                response = genai.GenerativeModel('gemini-1.5-flash').generate_content(
                     ["Describe this agricultural issue in detail and provide solutions.", img],
                     safety_settings={})
                 html_response = markdown(response.text)
