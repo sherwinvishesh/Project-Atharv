@@ -27,7 +27,7 @@ Atharv is a AI chatbot designed to empower farmers with actionable insights and 
 
 ## Installation
 
-To run QuickAid on your local machine, you need Python 3.6+ installed. Follow these steps:
+To run Project Atharv Lite on your local machine, you need Python 3.6+ installed. Follow these steps:
 
 1. Clone this repository to your local machine.
     ```bash
