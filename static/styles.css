@@ -19,11 +19,11 @@ h1, h2, h3 {
 }
 
 h1 {
-    font-size: 2.5em;
+    font-size: 5em;
 }
 
 h2 {
-    font-size: 2em;
+    font-size: 3em;
 }
 
 h3 {
@@ -31,6 +31,9 @@ h3 {
     color: #ccc; /* Slightly different color for subtitle */
 }
 
+.form-text{
+    font-size:3vh;
+}
 p, ul {
     margin: 20px 0;
     text-align: justify;
@@ -60,7 +63,7 @@ form {
 }
 
 .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 3vh;
     width: 80%;
 }
 
@@ -76,7 +79,7 @@ input, select {
     margin-top: 5px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 2vh;
     background-color: #fff; /* White background for input fields */
     color: #000; /* Black text for input fields */
 }
@@ -85,7 +88,7 @@ button {
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
-    font-size: 1em;
+    font-size: 2em;
     background-color: #4CAF50; /* Green button */
     color: #fff; /* White text */
     cursor: pointer;
@@ -146,4 +149,11 @@ button:hover {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+}
+
+@media (max-width: 768px) {
+    button {
+        font-size: 3em;
+
+    }
 }
