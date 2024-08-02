@@ -2,7 +2,7 @@
 # Atharv Lite: AI-Powered Farming Assistant
 
 
-> **Warning** : Atharv Lite is being uploaded to GitHub without many of its planned features and **is not the same as the Project-Atharv available online**. Current functionalities are limited and may lack certain capabilities. Use with caution.
+> **Warning** : Atharv Lite is being uploaded to GitHub without many of its planned features and **is not the same as the Project-Atharv that is available online**. Current functionalities are limited and may lack certain capabilities. Use with caution.
 
 ## Overview
 
@@ -27,15 +27,45 @@ Atharv is a AI chatbot designed to empower farmers with actionable insights and 
 
 ## Installation
 
-1. Clone the repository:
+To run QuickAid on your local machine, you need Python 3.6+ installed. Follow these steps:
+
+1. Clone this repository to your local machine.
+    ```bash
+    git clone https://github.com/sherwinvishesh/Project-Atharv-Lite
+    ```
+2. Navigate to the project directory.
+    ```bash
+    cd Project-Atharv-Lite
+    ```
+3. Install the required Python packages.
+    ```bash
+    pip3 install -r requirements.txt
+
+    ```
+    `If you are getting any errors while installing the above`
+    Then you have to create a virtual environment and run this program, here are the steps:
+    Create a Virtual Environment:
+    ```bash
+    python3 -m venv path/to/venv
+    ```
+    Activate the Virtual Environment:
+    mac or linux 
+    ```bash
+    source path/to/venv/bin/activate
+    ```
+    For Windows:
+    ```bash
+    path\to\venv\Scripts\activate
+    ```
+
+4. Set Up Environment Variables
+   Create a `.env` file in the root directory and add your API keys and other sensitive data:
+   ```plaintext
+   WEATHER_API_KEY='your_weather_api_key_here'
+   GEMINI_API_KEY='your_gemini_api_key_here'
+  
    ```
-   git clone https://github.com/sherwinvishesh/Project-Atharv-Lite
-   ```
-2. Install the required packages:
-   ```
-   pip install -r requirements.txt
-   ```
-3. Set up environment variables for API keys.
+
 
 ## Usage
 
