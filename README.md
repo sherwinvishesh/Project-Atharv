@@ -1,19 +1,23 @@
 
-# Atharv: AI-Powered Farming Assistant
+# Atharv Lite: AI-Powered Farming Assistant
 
 
+> **Warning** : Atharv Lite is being uploaded to GitHub without many of its planned features and **is not the same as the Project-Atharv available online**. Current functionalities are limited and may lack certain capabilities. Use with caution.
 
 ## Overview
 
-Atharv is a sophisticated AI chatbot designed to empower farmers with actionable insights and comprehensive agricultural support. Utilizing advanced machine learning algorithms, Atharv delivers real-time weather updates, disease prediction, and personalized farming recommendations.
+Atharv is a AI chatbot designed to empower farmers with actionable insights and comprehensive agricultural support. Utilizing advanced machine learning algorithms, Atharv delivers real-time weather updates, disease prediction, and personalized farming recommendations in the local language. This smart assistant analyzes vast amounts of data to provide farmers with forecasts, detect potential crop diseases early, and offer tailored solutions to enhance crop yield and farm efficiency. Atharv is more than just a tool; it's a farming partner that helps in making informed decisions, ensuring sustainability and maximizing productivity. Join the revolution in agriculture with Atharv, where technology meets tradition to foster a prosperous future for farming.
 
 ## Features
 
-- **Weather Insights**: Real-time weather information to help farmers plan agricultural activities.
-- **Text-Based Chatbot**: Provides detailed insights and advice on agriculture-related questions.
-- **Image-Based Chatbot**: Analyzes images of crops to detect diseases and offer solutions.
+- **Weather Insights**:  Atharv's weather insights provide comprehensive and real-time weather information, helping farmers plan their agricultural activities with precision. By analyzing weather patterns and forecasts, Atharv enables farmers to make informed decisions about planting, irrigation, and harvesting times, minimizing risks and improving crop yield. This feature ensures that farmers are always one step ahead of the weather, safeguarding their crops and enhancing farm productivity.
+  
+- **Image-Based Chatbot**: Atharv’s image-based chatbot revolutionizes the way farmers tackle crop diseases and soil health issues. By uploading images of affected crops, farmers receive in-depth analysis and solutions for the identified problems. This advanced diagnostic tool not only detects diseases but also offers insights into soil conditions, suggesting corrective measures and preventive strategies. This feature is instrumental in maintaining crop health and ensuring high yields, making it an essential tool for modern agriculture.
+  
+- **Text-Based Chatbot**: With Atharv's text-based chatbot, farmers have a reliable source of information at their fingertips. They can ask any agriculture-related questions and receive detailed insights and advice. Whether it's queries about crop rotation, fertilization techniques, or pest management, Atharv provides expert guidance based on the latest agricultural research and practices. This feature empowers farmers with knowledge, helping them optimize their operations and achieve better outcomes.
+  
 
-## Technologies Used
+## Technologies Used for Atharv Lite
 
 - Flask
 - Google Generative AI
@@ -55,21 +59,27 @@ Atharv is a sophisticated AI chatbot designed to empower farmers with actionable
 
 ## Contributing
 
-Contributions to Atharv are welcome! Please feel free to submit a Pull Request.
+Contributions to enhance this project are welcomed. Please feel free to fork the repository, make changes, and submit pull requests.
+
+## Support 
+If you encounter any issues or have any questions, please submit an issue on the GitHub issue tracker or feel free to contact me.
 
 ## License
 
 This project is licensed under the Apache-2.0 License - see the [LICENSE](LICENSE) file for details.
 
-## About the Developer
 
-Atharv is developed by Sherwin Vishesh Jathanna, a computer science undergraduate at Arizona State University. The project aims to address challenges faced by Indian farmers using innovative AI solutions.
 
 ## Acknowledgements
 
-- Thanks to all the farmers who inspired this project.
-- Special thanks to the district commissioner of Bengaluru Urban for their support.
+- Thanks to everyone who visits and uses this page. Your interest and feedback are what keep us motivated.
+- Special thanks to all the contributors who help maintain and improve this project. Your dedication and hard work are greatly appreciated.
 
-## Contact
+## Connect with Me
 
-For any queries or suggestions, please reach out to [your-email@example.com].
+Feel free to reach out and connect with me on [LinkedIn](https://www.linkedin.com/in/sherwinvishesh) or [Instagram](https://www.instagram.com/sherwinvishesh/).
+
+
+---
+
+Made with ❤️ by Sherwin
