@@ -1,8 +1,8 @@
 
-# Atharv Lite: AI-Powered Farming Assistant
+# Athar: AI-Powered Farming Assistant
 
 
-> **Warning** : Atharv Lite is being uploaded to GitHub without many of its planned features and **is not the same as the Project-Atharv that is available online**. Current functionalities are limited and may lack certain capabilities. Use with caution.
+> **Warning** : This is uploaded to GitHub without many of its planned features and **is not the same as the Project-Atharv that was available**. Current functionalities are limited and may lack certain capabilities. Use with caution.
 
 ## Overview
 
