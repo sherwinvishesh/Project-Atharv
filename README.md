@@ -1,8 +1,8 @@
 
-# Athar: AI-Powered Farming Assistant
+# Atharv (Lite): AI-Powered Farming Assistant using Gemini-1.5
 
 
-> **Warning** : This is uploaded to GitHub without many of its planned features and **is not the same as the Project-Atharv that was available**. Current functionalities are limited and may lack certain capabilities. Use with caution.
+> **Warning** : This is uploaded to GitHub without many of its planned features and **is not the same as the Project-Atharv that was available till August**. Current functionalities are limited and may lack certain capabilities. Use with caution.
 
 ## Overview
 
@@ -35,7 +35,7 @@ To run Project Atharv Lite on your local machine, you need Python 3.6+ installed
     ```
 2. Navigate to the project directory.
     ```bash
-    cd Project-Atharv-Lite
+    cd Project-Atharv-Lite/code
     ```
 3. Install the required Python packages.
     ```bash
@@ -56,6 +56,11 @@ To run Project Atharv Lite on your local machine, you need Python 3.6+ installed
     For Windows:
     ```bash
     path\to\venv\Scripts\activate
+    ```
+
+    Also if you are facing type issues in index and results file then do 
+    ```bash
+    sh run.txt
     ```
 
 4. Set Up Environment Variables
