@@ -1,0 +1,140 @@
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.content {
+    padding: 20px;
+    margin-bottom: 200px; /* Add margin to the bottom to make space for the form container */
+    box-sizing: border-box;
+}
+
+h1, h2, h3 {
+    margin: 10px 0;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 5em;
+}
+
+h2 {
+    font-size: 3em;
+}
+
+h3 {
+    font-size: 1.5em;
+    color: #ccc; /* Slightly different color for subtitle */
+}
+
+.form-text{
+    font-size:3vh;
+}
+
+p, ul {
+    margin: 20px 0;
+    text-align: justify;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+/* Updated .form-container */
+.form-container {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #333; /* Grey background for form */
+    color: #fff; /* White text for form */
+    padding: 20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    z-index: 10;
+    text-align: center; /* Centering content inside the form */
+}
+
+/* Added a new container for the Github button */
+.github-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Updated button styling for Github */
+#github-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 2em;
+    background-color: #000; /* Black button */
+    color: #fff; /* White text */
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#github-button:hover {
+    background-color: #444; /* Darker black on hover */
+}
+
+.typing-animation {
+    display: inline;
+    border-right: 2px solid #fff;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.image-scroll-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.image-scroll {
+    display: flex;
+    white-space: nowrap;
+    animation: scroll linear infinite;
+    animation-duration: calc(10s * 6); /* Adjust time based on number of images and desired speed */
+}
+
+.image-scroll img {
+    min-width: 200px;
+    max-width: 300px; /* Adjust based on your design */
+    height: auto;
+    margin-right: 20px;
+}
+
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); /* Move by 50% of the total width (because of duplication) */
+    }
+}
+
+.button-container {
+    position: relative;
+    display: inline-block;
+}
+
+#start-button,
+#loading-spinner-start {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#loading-spinner-start {
+    display: none;
+    height: 40px; /* Adjust this to match your button height */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@media (max-width: 768px) {
+    button {
+        font-size: 3em;
+    }
+}
